@@ -2,12 +2,12 @@
 % Fenêtre temporelle : 0 à 0.5 s
 % Décimation : 1 point sur 20
 
-filename = 'mmc_selected_signals_0p5s_decim20.csv';
+filename = 'mmc_selected_signals_0p5s_decim15.csv';
 
 t_full = out.tout(:);
 
 t_max = 0.5;
-decim_factor = 20;
+decim_factor = 1;
 
 idx_time = find(t_full <= t_max);
 idx_export = idx_time(1:decim_factor:end);
