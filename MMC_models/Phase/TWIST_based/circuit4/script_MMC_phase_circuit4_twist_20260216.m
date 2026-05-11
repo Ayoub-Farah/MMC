@@ -41,6 +41,18 @@ time_charge = 0.1; % [s] Charging time - used only if HaveChargingPhase = true
 time_decharge = 1.5; % [s] Decharging time
 
 duty_cycle = 0.95;
+
+% Communication model parameters 
+Tcom   = 10e-6;     % Time of communication
+Nnodes = 10;        % Number of module communicating
+Tcom_sample = Tcom / Ts;
+
+if abs(Tcom_sample - round(Tcom_sample)) < 1e-12
+    Kcom = round(Tcom_sample);
+else
+    Kcom = ceil(Tcom_sample); % In case Tcom is not a integer multiple of Ts
+end
+
 %% Initialize twist parameters
 
 run(latest_twist_parameters);
