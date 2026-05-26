@@ -34,7 +34,7 @@ latest_twist_parameters = "twist_parameters.m";
 
 sim_time = 1.5; %overall simulation time
 t_init_sim = 0; % [s] Simulation start time
-Ts = 5e-6; % [s] Simulation sample period
+Ts = 5e-7; % [s] Simulation sample period
 % Ts = 1e-6; % [s] Simulation sample period
 
 time_charge = 0.1; % [s] Charging time - used only if HaveChargingPhase = true
