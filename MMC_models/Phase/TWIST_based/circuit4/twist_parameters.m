@@ -61,3 +61,7 @@ twist_dead_time = 200e-9; %duty cycle positive dead time
 twist_freq_data_sampling = 20e3; %data sampling frequency
 twist_data_sampling_period = 1/twist_freq_data_sampling; %data sampling delay
 twist_data_acquisition_delay = 50e-9; %data acquisition at the peak of the carry
+
+% Communication parameters 
+vc_resolution_bits = uint8(6);
+vc_full_scale = single(50);
